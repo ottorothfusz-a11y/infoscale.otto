@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Careers · Otto Rothfusz</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#000;--fg:#fff;--dim:rgba(255,255,255,.6);--line:rgba(255,255,255,.14);--sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;opacity:0;transition:opacity .45s ease;}
+body.in{opacity:1}
+body.out{opacity:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.col{max-width:640px;margin:0 auto;padding:calc(28px + env(safe-area-inset-top,0px)) 24px calc(56px + env(safe-area-inset-bottom,0px));min-height:100%;display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin-bottom:96px}
+.top a{text-decoration:none;color:var(--dim)}
+.top a:hover{color:var(--fg)}
+.top .me{color:var(--fg);font-weight:500}
+.label{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin:0 0 14px}
+.label::after{content:"";display:block;width:56px;height:1px;background:var(--fg);margin-top:14px}
+h1{font-size:clamp(38px,6.5vw,64px);line-height:1.04;letter-spacing:-.04em;font-weight:500;margin:0 0 40px;text-wrap:balance;max-width:14ch}
+.lead{margin:0 0 14px;font-size:14px;color:var(--dim)}
+.roles{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px;padding:0;list-style:none}
+.roles a{display:inline-flex;align-items:center;height:44px;padding:0 20px;border-radius:999px;border:1px solid rgba(255,255,255,.35);text-decoration:none;font-size:15px;font-weight:500;transition:background .15s,border-color .15s}
+.roles a:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.note{margin:0 0 40px;color:var(--dim);font-size:15px}
+.team{margin:0 0 56px}
+.team img{display:block;width:100%;max-width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;border-radius:10px}
+.team figcaption{margin-top:10px;font-size:13px;color:var(--dim);font-style:italic}
+.apply{margin-top:auto}
+.apply a{font-size:clamp(20px,2.4vw,24px);text-decoration:none;letter-spacing:-.02em}
+.apply a b{font-weight:500;border-bottom:1px solid rgba(255,255,255,.35)}
+.apply a:hover b{border-color:#fff}
+.apply p{margin:8px 0 0;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.copy{display:inline-block;margin-top:14px;font-size:13px;color:var(--dim);background:none;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-family:inherit;cursor:pointer}
+.copy:hover{color:var(--fg);border-color:var(--fg)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+@media (max-width:520px){.top{margin-bottom:64px}}
+</style>
+</head>
+<body>
+<div class="col">
+  <nav class="top">
+    <a class="me back" href="index.html">← Otto Rothfusz</a>
+    <a href="https://www.instagram.com/ottorothfusz" target="_blank" rel="noopener">@ottorothfusz</a>
+  </nav>
+
+  <p class="label">Hiring</p>
+  <h1>Creative minds with unreasonably high standards.</h1>
+
+  <p class="lead">Join our team of creatives</p>
+  <ul class="roles">
+    <li><a href="https://ig.me/m/ottorothfusz" target="_blank" rel="noopener">Legal Advisor</a></li>
+  </ul>
+  <p class="note">Come scale content with us. Remote.</p>
+
+  <figure class="team">
+    <img src="team.jpg" alt="The team on a plane, all smiling at the camera" loading="lazy">
+    <figcaption>On the way to a shoot.</figcaption>
+  </figure>
+
+  <div class="apply">
+    <a href="https://ig.me/m/ottorothfusz" target="_blank" rel="noopener">Apply → <b>DM @ottorothfusz</b></a>
+    <p>Portfolio + short intro</p>
+  </div>
+</div>
+<script>
+(function(){
+  requestAnimationFrame(function(){document.body.classList.add("in");});
+  document.querySelectorAll('a[href$=".html"]').forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();document.body.classList.add("out");setTimeout(function(){location.href=a.getAttribute("href");},420);});});
+})();
+</script>
+</body>
+</html>
